@@ -14,7 +14,12 @@ Im Rahmen einer Masterarbeit wurde ein Werkzeug entwickelt, dass bei der Auswert
 
 ## Installation
 
-Installieren Sie die Abhängigkeiten, indem Sie die requirements.txt verwenden:
+1. Klonen Sie das Repository
+```bash
+git clone https://github.com/JWiech98/stance-detection-comments.git
+```
+
+2. Installieren Sie die Abhängigkeiten, indem Sie die requirements.txt verwenden:
 ```bash
 pip install -r requirements.txt
 ```
