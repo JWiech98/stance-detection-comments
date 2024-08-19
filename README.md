@@ -25,11 +25,53 @@ pip install -r requirements.txt
 ```
 ## Verwendung
 
-Erklären Sie, wie man das Projekt benutzt.
+Um das Skript auszuführen, verwenden Sie den folgenden Befehl:
+```bash
+ python stancedetection_code.py /pfad/zu/beitraegen.xlsx /pfad/zu/kommentaren.json /pfad/zu/api_key.txt (OPTIONAL: Huggingface Modell-ID)
+```
+
+Das LLM kann grundsätzlich ausgetauscht werden, wodurch jedoch die Qualität und Struktur der Ergebnisse beeinflusst werden kann. 
+Gleiches gilt für die verwendeten Prompts. Sie können im Code an den Anwendungskontext angepasst werden, was jedoch Auswirkungen auf Struktur und Qualität der Ergebnisse haben kann.
+
 
 ## Beispiele
 
-Geben Sie Code-Beispiele an.
+Beispielbeitrag:
+"Der Heinrich-Traun-Platz (HTP) in der Heinrich-Traun-Straße ist eigentlich ein Lieblingsort in der Nachbarschaft. Leider ist er oft in einem ungepflegten Zustand, öffentliche Sitzmöglichkeiten sind nicht vorhanden.
+Eine qualitative Aufwertung würde die Aufenthaltsqualität und Beliebtheit deutlich erhöhen."
+
+Zugehöriger Beispielkommentar:
+"Vielleicht kann die Nutzung der Wiese zum Spielen UND Sitzgelegenheiten für Erwachsene möglich sein."
+
+Ergebnisse der Stance Detection:
+
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-0pky">Beitragsnummer</th>
+    <th class="tg-0pky">Beitragstext</th>
+    <th class="tg-0pky">Hauptaussage</th>
+    <th class="tg-0pky">Kommentarnummer</th>
+    <th class="tg-0pky">Kommentartext</th>
+    <th class="tg-0pky">Haltung</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-c3ow" rowspan="3">8784</td>
+    <td class="tg-0pky" rowspan="3">Der Heinrich-Traun-Platz (HTP) in der Heinrich-Traun-Straße ist eigentlich ein Lieblingsort in der Nachbarschaft. Leider ist er oft in einem ungepflegten Zustand, öffentliche Sitzmöglichkeiten sind nicht vorhanden.<br>Eine qualitative Aufwertung würde die Aufenthaltsqualität und Beliebtheit deutlich erhöhen. </td>
+    <td class="tg-0pky">1. Ungepflegter Zustand am Heinrich-Traun-Platz (Problem)</td>
+    <td class="tg-c3ow" rowspan="3">17516</td>
+    <td class="tg-0pky" rowspan="3">Vielleicht kann die Nutzung der Wiese zum Spielen UND Sitzgelegenheiten für Erwachsene möglich sein.</td>
+    <td class="tg-c3ow">Neutralität</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2. Fehlen von öffentlichen Sitzmöglichkeiten (Problem)</td>
+    <td class="tg-c3ow">Neutralität</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3. Potenzial für Aufwertung der Aufenthaltsqualität (Vorschlag)</td>
+    <td class="tg-c3ow">Zustimmung</td>
+  </tr>
+</tbody></table>
 
 ## Lizenz
 
