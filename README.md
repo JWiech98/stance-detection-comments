@@ -30,7 +30,11 @@ Um das Skript auszuführen, verwenden Sie den folgenden Befehl:
  python stancedetection_code.py /pfad/zu/beitraegen.xlsx /pfad/zu/kommentaren.json /pfad/zu/api_key.txt (OPTIONAL: Huggingface Modell-ID)
 ```
 
-Das LLM kann grundsätzlich ausgetauscht werden, wodurch jedoch die Qualität und Struktur der Ergebnisse beeinflusst werden kann. 
+Die Beiträge werden in Form einer Excel-Datei erwartet. Die Kommentare werden in Form einer JSON-Datei erwartet.
+
+Der API-Key muss zuvor auf HuggingFace beantragt werden.
+Das LLM kann grundsätzlich ausgetauscht werden, wodurch jedoch die Qualität und Struktur der Ergebnisse beeinflusst werden kann. Beachten Sie, dass für das jeweilig verwendete Sprachmodell Nutzungsrechte vorliegen müssen. Beantragen Sie diese auf HuggingFace.
+
 Gleiches gilt für die verwendeten Prompts. Sie können im Code an den Anwendungskontext angepasst werden, was jedoch Auswirkungen auf Struktur und Qualität der Ergebnisse haben kann.
 
 
